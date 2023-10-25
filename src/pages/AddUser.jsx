@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import NavDash from './NavDash'
+import Sidebar from '../components/Sidebar';
 import Form from 'react-bootstrap/Form';
 import { Formik } from 'formik';
+import Dashboard from './Dashboard';
 
 function AddUser() {
   return (
     <>
-      <NavDash />
+      <Sidebar />
       <Formik
         initialValues={{
-          UserName: "",
-          Password: ""
+          username: "",
+          password: ""
 
         }}
         
@@ -23,7 +24,7 @@ function AddUser() {
   
               actions.resetForm()
               alert('Datos agregados correctamente')
-              window.location = '/IndexUser'; 
+              window.location = '/dashboard'; 
 
         }}
         >
@@ -35,24 +36,21 @@ function AddUser() {
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
                 <Form.Label>Usuario</Form.Label>
-                <Form.Control type="text" name="UserName"
+                <Form.Control type="text" name="username"
                 onChange={handleChange}
-                value={values.UserName} />
+                value={values.username} />
               </Form.Group>
               <Form.Group className="mb-3" >
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="text" name="Password"
+                <Form.Control type="password" name="password"
                 onChange={handleChange} 
-                value={values.Password}/>
+                value={values.password}/>
               </Form.Group>
               <button type='onSubmit' className='btn btn-success'>Guardar</button>
             </Form>
-
           </div>
-
         )}
       </Formik>
-
     </>
   )
 }

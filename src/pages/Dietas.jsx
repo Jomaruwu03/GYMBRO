@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 import Week from '../components/Week';
 import Calendar from '../components/Calendar';
 
-function Rutinas() {
+function Dietas() {
     return (
       <div className='grid lg:grid-cols-4 xl:grid-cols-6 min-h-screen bg-gray-100'>
         <Sidebar/>
@@ -19,4 +19,4 @@ function Rutinas() {
     );
   }
 
-export default Rutinas;
+export default Dietas;

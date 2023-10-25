@@ -22,6 +22,20 @@ function Home() {
               <span className='py-1 px-3 bg-orange-400/80 rounded-full'> 550 minutos</span>
             </div>
             {/* card 2 */}
+            <div className='bg-orange-300 p-8 rounded-xl text-white flex flex-col gap-2'>
+              <RiBarChartGroupedLine className='text-5xl'/>
+              <h4 className='text-2xl'>Kcal 5,350 </h4>
+              <CgGym className='text-5xl text-black'/>
+              <span className='text-2xl'>30 Ejercicios</span>
+              <span className='py-1 px-3 bg-orange-400/80 rounded-full'> 550 minutos</span>
+            </div>
+            <div className='bg-orange-300 p-8 rounded-xl text-white flex flex-col gap-2'>
+              <RiBarChartGroupedLine className='text-5xl'/>
+              <h4 className='text-2xl'>Kcal 5,350 </h4>
+              <CgGym className='text-5xl text-black'/>
+              <span className='text-2xl'>30 Ejercicios</span>
+              <span className='py-1 px-3 bg-orange-400/80 rounded-full'> 550 minutos</span>
+            </div>
             <div>
                 <Calendar/>
             </div>

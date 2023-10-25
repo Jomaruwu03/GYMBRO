@@ -32,13 +32,13 @@ const Sidebar = () => {
             Usuarios   
             </a>
             <a 
-            href="#"
+            href="/Rutinas"
             className="flex items-center gap-4 text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
             >   
             Rutinas   
             </a>
             <a 
-            href="#"
+            href="/Dietas"
             className="flex items-center gap-4 text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
             >   
             Dietas   
@@ -46,7 +46,7 @@ const Sidebar = () => {
         </nav>
         <div className="bg-gray-300/50 text-white p-4 rounded-xl">
             <p className="text-gray-900">¿Tienes problemas?</p>
-            <a href="#">Contactanos</a>
+            <a href="/Contactanos">Contactanos</a>
         </div>
         {/* botom */}
         <button onClick={() => setShowMenu(!showMenu)} className="lg:hidden fixed right-4 bottom-4 text-2xl bg-orange-400 p-3 rounded-full text-white z-50">
