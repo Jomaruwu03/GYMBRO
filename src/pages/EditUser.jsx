@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { Formik } from 'formik';
 import axios from "axios";
-import { useParams } from 'react-router-dom'; 
+import { useParams , useNavigate } from 'react-router-dom'; 
 
 function Edituser() {
-
+const navigate = useNavigate()
 const params = useParams()
 // console.log('Este es un parametro '+ params.id)
 console.log(params)
@@ -55,8 +55,7 @@ return (
                         alert('Datos actualizados correctamente')
                     if (res.status == 200) {
                         //Redirecciomar 
-                        window.location = '/dashboard';
-
+                        navigate("/dashboard")
                     }
                     else {
                         alert("Succedio un error")
@@ -138,7 +137,7 @@ return (
                                 </div>
                                 <br />
                                 <button
-                                    type="submit"
+                                    type="onSubmit"
                                     className="bg-transparent hover:bg-gray-400 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded"
                                 >
                                     Guardar

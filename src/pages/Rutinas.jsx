@@ -1,22 +1,29 @@
 import React from 'react';
-import Header from "../components/Header"; 
-import { RiBarChartGroupedLine } from "react-icons/ri";
-import { CgGym } from "react-icons/cg";
 import Sidebar from '../components/Sidebar';
-import Week from '../components/Week';
-import Calendar from '../components/Calendar';
+import Mapa from '../components/Mapa';
 
 function Rutinas() {
-    return (
-      <div className='grid lg:grid-cols-4 xl:grid-cols-6 min-h-screen bg-gray-100'>
-        <Sidebar/>
-        <main className='lg:col-span-3 xl:col-span-5 bg-gray-100 p-8'>
-            <Header/>
-            <section className='grid grid-cols-1 m:grid-cols-2 lg:grid-cols-4 mt-10 items-center justify-center flex-col gap-8'>
-            </section>
-        </main>
+
+  const googleMapsApiKey = "AIzaSyD7eg_7MntktPUSUweD_GLTvv01QHeQEEY"
+
+
+  return (
+    <div className="flex h-screen bg-white">
+    <div className="w-64" style={{ flexShrink: 0 }}>
+      <Sidebar />
       </div>
-    );
-  }
+      <div className="flex flex-col flex-grow">
+        <h1 className="text-center text-xl font-bold my-4 text-gray-600 bg-orange-400 rounded-full py-2 px-4 inline-block">Encuentra gimnasios cercanos</h1>
+        <div className="flex-grow">
+          <Mapa googleMapsApiKey={googleMapsApiKey} />
+        </div>
+      </div>
+    </div>
+  );
+  
+}  
+
+
+
 
 export default Rutinas;

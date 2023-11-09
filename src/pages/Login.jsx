@@ -1,6 +1,6 @@
 import React from "react";
-import Registro from "./Registro";
 import { GoogleLogin } from "@react-oauth/google";
+import Footer from "../components/Footer";
 
 function Login() {
   const responseMessage = (response) => {
@@ -10,22 +10,23 @@ const errorMessage = (error) => {
     console.log(error);
 };
 
-  return (
-    <>
-      <div className="bg-gray-400/40 flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://img.freepik.com/foto-gratis/muscular-hombre-haciendo-levantamiento-pesas-gimnasio_1163-3551.jpg"
-            alt="uwu"/>
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Ingresa a tu Espacio Personal
-          </h2>
-        </div>
-
+return (
+  <>
+   <div className="flex min-h-screen flex-col">
+    <div className="bg-gray-400/40 flex-grow flex items-center justify-center px-6 py-12">
+      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          className="mx-auto h-50 w-99" 
+          src="public\imagenes\logo.png" 
+          alt="GYMBRO" 
+        />
+      </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
             <div>
+                      <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
+          Ingresa a tu Espacio Personal
+        </h2>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Correo Electronico
               </label>
@@ -48,7 +49,7 @@ const errorMessage = (error) => {
                 </label>
                 <div className="text-sm">
                   <a href="#" className="font-semibold text-orange-600 hover:text-orange-500">
-                    Olvidaste tu Contraseña?
+                    ¿Olvidaste tu Contraseña?
                   </a>
                 </div>
               </div>
@@ -78,17 +79,18 @@ const errorMessage = (error) => {
         </div>
             </div>
           </form>
-
           <p className="mt-10 text-center text-sm text-gray-500">
             ¡No tienes cuenta?{' '}
-            <a href="/Registro" className="font-semibold leading-6 text-orange-600 hover:text-orange-500">
+            <a href="/registro" className="font-semibold leading-6 text-orange-600 hover:text-orange-500">
               Registrate
             </a>
           </p>
         </div>
       </div>
+        <Footer/>
+      </div>
     </>
   )
-}
+};
 
 export default Login;
