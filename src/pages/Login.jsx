@@ -80,7 +80,7 @@ return (
             </div>
           </form>
           <p className="mt-10 text-center text-sm text-gray-500">
-            ¡No tienes cuenta?{' '}
+            ¿No tienes cuenta?{' '}
             <a href="/registro" className="font-semibold leading-6 text-orange-600 hover:text-orange-500">
               Registrate
             </a>

@@ -44,10 +44,10 @@ const Sidebar = () => {
   Calcular IMC  
 </a>
 <a 
-  href="/Dietas"
+  href="/Receta"
   className="flex items-center gap-8 text-lg text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
 >   
-  Rutinas   
+  Checa tus alimentos   
 </a>
 <a 
   href="/Dietas"

@@ -11,6 +11,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import Edituser from './pages/EditUser';
 import Nosotros from './pages/Nosotros'
 import Calculo from './pages/Calculo'
+import Receta from './pages/Receta'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="edituser/:id" element={<Edituser />} />
         <Route path="Nosotros" element={<Nosotros />} />
         <Route path="Calculo" element={<Calculo />} />
+        <Route path="Receta" element={<Receta />} />
         </Routes>
     </BrowserRouter>
     </GoogleOAuthProvider>
