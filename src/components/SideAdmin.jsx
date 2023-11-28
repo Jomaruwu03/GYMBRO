@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Sidebar = () => {
+const SideAdmin = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
@@ -11,39 +11,27 @@ const Sidebar = () => {
                     className="w-30 h-50 object-cover rounded-full"
                 />
                 <h1 className="text-xl text-black font-bold">GYMBRO</h1>
-                <p className="bg-orange-300 py-1 px-3 rounded-full">Haz el cambio</p>
+                <p className="bg-orange-300 py-1 px-3 rounded-full">ADMIN</p>
             </div>
       <div className="bg-orange-400 p-8 rounded-tr-[130px] flex flex-col justify-between flex-grow">
       <nav className="flex flex-col gap-12">
         <a 
-  href="/Home"
+  href="/HomeAdmin"
   className="flex items-center gap-8 text-lg text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
 >   
   Inicio   
 </a>
 <a 
-  href="/Ejercicios"
+  href="/Dashboard"
   className="flex items-center gap-8 text-lg text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
 >   
-  Ejercicios   
+  Usuarios   
 </a>
 <a 
-  href="/Mapa"
+  href=""
   className="flex items-center gap-8 text-lg text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
 >   
-  Buscar GYM
-</a>
-<a 
-  href="/Calculo"
-  className="flex items-center gap-8 text-lg text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
->   
-  Calcular IMC  
-</a>
-<a 
-  href="/Dietas"
-  className="flex items-center gap-8 text-lg text-white py-2 px-4 rounded-xl hover:bg-gray-300/50 transition-colors"
->   
-Buscar recetas   
+  Administra Rutinas
 </a>
         </nav>
         <div className="mt-auto">
@@ -61,4 +49,4 @@ Buscar recetas
   </div>
 );
 }
-export default Sidebar;
+export default SideAdmin;

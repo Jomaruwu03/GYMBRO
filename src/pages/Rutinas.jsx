@@ -9,9 +9,7 @@ function Rutinas() {
 
   return (
     <div className="flex h-screen bg-white">
-    <div className="w-64" style={{ flexShrink: 0 }}>
       <Sidebar />
-      </div>
       <div className="flex flex-col flex-grow">
         <h1 className="text-center text-xl font-bold my-4 text-gray-600 bg-orange-400 rounded-full py-2 px-4 inline-block">Encuentra gimnasios cercanos</h1>
         <div className="flex-grow">

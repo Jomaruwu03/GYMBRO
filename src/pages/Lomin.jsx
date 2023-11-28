@@ -4,10 +4,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { GoogleLogin } from "@react-oauth/google";
 import Footer from "../components/Footer";
 
-function LoginUser() {
+function Admin() {
   const handleSubmit = async (values, actions) => {
     try {
-      const res = await axios.post('http://localhost:3000/users/login', values);
+      const res = await axios.post('http://localhost:3001/users/login', values);
       actions.resetForm();
       if (res.data.success) {
         alert("Inicio de sesión exitoso");
@@ -89,7 +89,7 @@ function LoginUser() {
                 </div>
                 <div>
                 <a 
-  href="/Home"
+  href="/dashboard"
                     className="flex w-full justify-center rounded-md bg-orange-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Entrar
@@ -123,4 +123,4 @@ function LoginUser() {
   );
 }
 
-export default LoginUser;
+export default Admin;

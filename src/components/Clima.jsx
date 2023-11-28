@@ -45,7 +45,7 @@ const WeatherSearch = () => {
     const kelvinToCentigrade = (temp) => parseInt(temp - 273.15);
 
     return (
-        <section className="weather-content min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 justify-center items-start">
             <div className="container mx-auto p-4 max-w-md bg-orange-300 rounded-xl shadow-md">
                 <h1 className="text-2xl font-bold text-center text-gray-700">¿Cómo está el clima en tu ciudad para hacer ejercicio?</h1>
                 <div className="result mt-6">
@@ -95,4 +95,3 @@ const WeatherSearch = () => {
 };
 
 export default WeatherSearch;
-

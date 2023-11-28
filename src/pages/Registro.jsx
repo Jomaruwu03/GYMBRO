@@ -2,15 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import { Formik } from 'formik';
 import { Form, Button } from 'react-bootstrap';
-import Footer from '../components/Footer'; 
 
 function AddUser() {
   const handleSubmit = async (values, actions) => {
     try {
-      const res = await axios.post('http://localhost:3000/users', values);
+      const res = await axios.post('http://localhost:3001/users', values);
       actions.resetForm();
       alert('Datos agregados correctamente');
-      window.location = '/dashboard';
+      window.location = '/Login';
     } catch (error) {
       alert('Hubo un error al agregar los datos');
       console.error(error);
@@ -45,7 +44,7 @@ function AddUser() {
                     />
                   </Form.Group>
                   <Form.Group>
-                    <Form.Label className="text-gray-800">Password</Form.Label>
+                    <Form.Label className="text-gray-800">Contraseña</Form.Label>
                     <Form.Control
                       type="password"
                       name="password"
@@ -62,7 +61,6 @@ function AddUser() {
             </Formik>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

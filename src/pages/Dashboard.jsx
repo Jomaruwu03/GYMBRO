@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import axios from 'axios';
 import { useNavigate } from "react-router";
 import Sidebar from "../components/Sidebar";
+import SideAdmin from "../components/SideAdmin";
 
 function Dashboard() {
     const [Users, setUsers] = useState([]);
@@ -9,13 +10,13 @@ function Dashboard() {
         fecthUsers();
     }, []);
     const fecthUsers = async () => {
-        const response = await axios.get('http://localhost:3000/users')
+        const response = await axios.get('http://localhost:3001/users')
         setUsers(response.data);
         console.log('Datos de la API')
         console.log(response)
     };
     const HandeDelete = async (id) => {
-        const response = await axios.delete(`http://localhost:3000/users/${id}`);
+        const response = await axios.delete(`http://localhost:3001/users/${id}`);
         if (response.status == 200) {
             alert("Se borro correctamente")
         } else {
@@ -25,11 +26,11 @@ function Dashboard() {
 
     }
 
-    const navigate = useNavigate()
+
 
     return (
-        <div className="grid grid-cols-12 min-h-screen bg-gray-100">
-          <div className="col-span-3 bg-gray-200"><Sidebar/></div>
+        <div className="flex h-screen bg-white">
+          <div className="col-span-3 bg-gray-200"><SideAdmin/></div>
           <div className="col-span-9 overflow-auto p-4">
                                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                     <thead class="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
@@ -47,10 +48,10 @@ function Dashboard() {
                                                 Fecha de Creación
                                             </th>
                                             <th scope="col" class="px-6 py-3">
-                                                Eliminar
+                                                Editar
                                             </th>
                                             <th scope="col" class="px-6 py-3">
-                                                Editar
+                                            Eliminar
                                             </th>
                                         </tr>
                                     </thead>
